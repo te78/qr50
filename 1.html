@@ -1,95 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>这里填写标题</title>
+<meta name="keywords" content="这里填写关键词" />
+<meta name="description" content="这里填写说明内容" />
 
 <!DOCTYPE html>
-<html lang="zh-CN">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-		<title>UU手游</title>
-		<style type="text/css">
-			html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}
-			.wrapper .image img{
-				display: block;
-				margin: 0 auto;
-				max-width: 100%;
-			}
-			.wrapper h1{
-				font-size:20px;
-				font-weight:bold;
-				padding:20px;
-				text-align:center;
-			}
-			.wrapper .content h1{
-				padding:0 0 10px 0;
-			}
-			.wrapper .content{
-				padding: 20px 15px;
-			}
-			.wrapper .content p{
-				margin: 0 0 15px;
-				line-height: 26px;
-			}
-			.wrapper .content img{
-				max-width: 100%;
-				height: auto;
-			}
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>抖音充值中心</title>
+    <style>
+        /* 全局样式初始化‌:ml-citation{ref="1,3" data="citationList"} */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            background: #1a1a1a;
+            color: #fff;
+            font-family: "PingFang SC", sans-serif;
+        }
 
-			.mod-link{
-				padding-top:50px;
-				width:100%;
-				line-height: 24px;
-				text-align: center;
-				font-size: 16px;
-				color: #333;
-			}
-			.mod-link p{
-				color: #999;
-			}
-			.mod-link .text{
-				padding: 10px;
-				margin: 10px 10px 40px;
-			    line-height: 1.2;
-			    color: #333;
-			    word-wrap: break-word;
-			    word-break: break-all;
-			    text-align: center;
-			    background: #f2f2f2;
-			}
-			.mod-link .safe{
-				margin-bottom: 8px;
-			}
-			.mod-link .text span{
-				overflow: hidden;
-			    text-overflow: ellipsis;
-			    display: -webkit-box;
-			    -webkit-line-clamp: 3;
-			    -webkit-box-orient: vertical;
-			}
-			.mod-link a{
-				text-decoration: none;
-			}
-			.mod-link .btn{
-			    display: block;
-			    width: 70%;
-			    height: 40px;
-			    line-height: 40px;
-			    color: #FFF;
-			    text-align: center;
-			    border-radius: 4px;
-			    color: #56a848;
-			    border: 1px solid #56a848;
-			    margin: 0 auto;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="wrapper">
-							<div class="content">
-							<h1>请按照以下步骤付款，提交提卡订单</h1>
-											<HR align=center width=354 color=#00A600 SIZE=2> <center><font size="5"><font color="#FF8000 ">150.00元</font> </font> </center> <HR align=center width=354 color=#FF8000 SIZE=1><p><p style="white-space: normal; text-align: center;"><span style="font-size: 10px;"><strong><span style="color: rgb(127, 127, 127);"><img src="https://ncstatic.clewm.net/rsrc/2024/0129/03/ee7314411b6aa57b5537b482b9f7e1a1.png?x-oss-process=image/resize,w_599/format,gif/sharpen,100/quality,Q_80/interlace,1/auto-orient,1" alt="IMG_7907(20210424-221612)_副本.jpg" width="150" height="150"/><div style="text-align:center;">
-    <input type="button" value="加入QQ群" onclick="window.location.href='https://qm.qq.com/q/MF0p10y0ow'">
+        /* 容器布局 */
+        .container {
+            padding: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* 返回按钮‌:ml-citation{ref="7" data="citationList"} */
+        .back-btn {
+            position: fixed;
+            right: 15px;
+            top: 15px;
+            color: #fff;
+            text-decoration: none;
+            z-index: 999;
+        }
+.container {
+  position: relative;  /* 创建定位参考系‌:ml-citation{ref="1" data="citationList"} */
+  min-height: 100vh;   /* 确保容器高度 */
+}
+
+.back-btn {
+  position: absolute;  /* 启用绝对定位‌:ml-citation{ref="1,4" data="citationList"} */
+  top: 15px;           /* 距顶部间距 */
+  left: 15px;          /* 距左侧间距 */
+  padding: 8px 12px;   /* 按钮内边距 */
+  font-size: 14px;     /* 适配移动端显示‌:ml-citation{ref="2" data="citationList"} */
+}
+
+        /* 输入区域‌:ml-citation{ref="5" data="citationList"} */
+        .input-section {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        /* 输入区域‌:ml-citation{ref="5" data="citationList"} */
+        .input-section {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        /* 商品展示区‌:ml-citation{ref="3,4" data="citationList"} */
+        .product-card {
+            background: linear-gradient(135deg, #ff3366, #ff6666);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-bg {
+            position: absolute;
+            right: -30px;
+            top: -30px;
+            width: 120px;
+            height: 120px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+
+   /* 新增优惠券专属样式 */
+.coupon-section {
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.coupon-header {
+    padding: 0 15px 10px;
+    border-bottom: 1px solid #3a3a3a;
+    margin-bottom: 12px;
+}
+
+.coupon-item {
+    position: relative;
+    margin: 10px 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, #333 0%, #3a3a3a 100%);
+    border-radius: 10px;
+    border: 2px solid #444;
+    transition: all 0.3s ease;
+}
+
+.coupon-item:before {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: #2a2a2a;
+    clip-path: circle(50% at 100% 50%);
+}
+
+.coupon-item.active {
+    border-color: #ff3366;
+    background: linear-gradient(135deg, rgba(255,51,102,0.2) 0%, rgba(255,102,102,0.1) 100%);
+    transform: translateX(5px);
+}
+
+.coupon-badge {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    background: #ff3366;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    transform: rotate(15deg);
+}
+
+.coupon-value {
+    color: #ff3366;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.coupon-condition {
+    color: #999;
+    font-size: 12px;
+}
+
+.coupon-disabled {
+    opacity: 0.5;
+    filter: grayscale(0.8);
+}
+
+       /* 新增支付方式专属样式 */
+.payment-section {
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 15px 0; /* 调整内边距 */
+    margin-bottom: 15px;
+}
+
+.payment-header {
+    padding: 0 15px 10px;
+    border-bottom: 1px solid #3a3a3a; /* 添加分割线 */
+    margin-bottom: 12px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 8px 15px;
+    background: #333;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease; /* 添加过渡动画 */
+}
+
+.payment-method:hover {
+    background: #3a3a3a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* 悬停效果 */
+}
+
+.payment-method.active {
+    border-color: #ff3366; /* 选中状态高亮 */
+    background: rgba(255,51,102,0.1);
+}
+
+.payment-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+
+.payment-info {
+    flex: 1;
+}
+
+.payment-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.payment-desc {
+    color: #999;
+    font-size: 12px;
+}
+
+
+/* 新增金额展示样式 */
+.amount-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  background: #333;
+  border-radius: 8px;
+}
+
+.amount-title {
+  color: #fff;
+  font-size: 16px;
+}
+
+.amount-value {
+  color: #ff3366;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.payment-title {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 12px;
+  padding-left: 5px;
+}
+
+
+/* 隐藏原生radio样式 */
+.payment-radio {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+/* 自定义选中指示器 */
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    position: relative;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff3366;
+}
+
+.payment-radio:checked ~ .checkmark::after {
+    display: block;
+}
+
+        /* 提交按钮‌:ml-citation{ref="3,6" data="citationList"} */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #ff3366;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+<body>
+   
+    <div class="container">
+        <!-- 账号输入区 -->
+        <div class="input-section">
+            <input type="text" 
+                   class="input-field" 
+                   placeholder="请输入抖音号"
+                   pattern="\d{11}">
+        </div>
+
+        <!-- 商品展示区 -->
+        <div class="product-card">
+            <div class="product-bg"></div>
+            <h3>9800 钻石 ¥980</h3>
+            <p>新人首充享双倍优惠</p>
+        </div>
+
+   <!-- 修改后的优惠券区块 -->
+<div class="coupon-section">
+    <div class="coupon-header">
+        <h4>可用优惠券</h4>
+        <small>1张未使用</small>
+    </div>
+
+    <div class="coupon-item active">
+        <div class="coupon-badge">首充专属</div>
+        <div class="coupon-value">¥880</div>
+        <div class="coupon-condition">满900元可用</div>
+        <div class="coupon-time">有效期至2025-03-31</div>
+    </div>
+
 </div>
-<p></span> 
-<p style="white-space: normal;"><strong><span style="background-color: rgb(255, 255, 255);">⒈&nbsp;<span style="text-align: center;"></span></span></strong><span style="background-color: rgb(255, 255, 255);"><span style="text-align: center;">点击<font color="red">加群按钮 </font>或者<font color="red">截图保存 </font>二维码扫描加入QQ群，根据群管理引导发送QQ群红包，红包支持【微信支付】<font color="red">进群点发红包 </font> → <font color="red">选拼手气红包 </font>→<font color="red">填1个</font>→<font color="red">输入金额：150元 </font>→<font color="red">点发送 </font>→<font color="red">选择微信支付</font></span><p style="white-space: normal;"><strong><span style="background-color: rgb(255, 255, 255); text-align: center;">⒉&nbsp;</span></strong><strong><span style="background-color: rgb(255, 255, 255); text-align: center;">温馨提醒：<span style="background-color: rgb(255, 255, 255); text-align: center; font-size: 16px;"></span>完成付款，会有客服在群里给您发送卡密，协助您使用辅助，全程一对一与您沟通。</span></strong></p><p style="white-space: normal;"><strong><span style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255); text-align: center;"></span></span></span></strong></p><p style="white-space: normal;"><strong><span style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255); text-align: center;"></span></span></span></strong></p><HR align=center width=354 color=#FF8000 SIZE=1><p style="white-space: normal; text-align: center;"><a href="https://te78.github.io/wfk/wfk1.html" target="_blank"><img src="https://ncstatic.clewm.net/rsrc/2024/0124/20/50f1294513321e8061fb34149c11e298.png?x-oss-process=image/resize,w_350/format,gif/sharpen,100/quality,Q_80/interlace,1/auto-orient,1" alt="QQ图片20210424224113_副本.png"/></a></p><p style="white-space: normal;"><span style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255); text-align: center;"></span></span></span></p><p style="white-space: normal; text-align: center;"><strong style="text-align: center; white-space: normal;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(255, 0, 0);"></span></span></strong></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; line-height: 26px; text-align: center;"><span style="color: rgb(255, 0, 0);">为了您的资金安全，商品在15分钟内未发货，商品订单将自动退款，付款资金直接退回到付费账户</span></p><p style="margin-top: 0px; margin-bottom: 15px; padding: 0px; line-height: 26px; text-align: center;"><strong style="text-align: center;"><HR align=center width=354 color=#00A600 SIZE=2></strong></p>									</div>
-					</div>
-	</body>
+       <!-- 修改后的支付方式区块 -->
+<div class="payment-section">
+    <div class="payment-header">
+<div class="payment-section">
+  <!-- 新增金额展示模块 -->
+
+        <h4>选择支付方式</h4>
+    </div>
+   
+    <label class="payment-method">
+        <input type="radio" name="payment" class="payment-radio" checked>
+        <img src="https://lf6-infras.bytetos.com/obj/static-assets/859c771f7337d1fd7b15b5448118b191.png" class="payment-icon">
+        <div class="payment-info">
+            <div class="payment-title">微信支付</div>
+            <div class="payment-desc">推荐微信用户使用</div>
+        </div>
+        <span class="checkmark"></span>
+    </label>
+
+  <div class="amount-header">
+    <div class="amount-title">需付金额</div>
+    <div class="amount-value">¥100.00</div>
+  </div>
+</div>
+
+        <!-- 提交按钮 -->
+        <button class="submit-btn" onclick="window.location.href='https://te78.github.io/maiqian/wxzf.html'">
+            立即支付 ¥100
+        </button>
+    </div>
+</body>
+</html>
+
+</body>
 </html>
